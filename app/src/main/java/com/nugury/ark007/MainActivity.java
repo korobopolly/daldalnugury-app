@@ -7,6 +7,8 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.ImageView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -85,9 +87,6 @@ public class MainActivity extends AppCompatActivity {
                 ft.replace(R.id.Main_Frame,frag5);
                 ft.commit();
                 break;
-
-
-
         }
     }
 }
