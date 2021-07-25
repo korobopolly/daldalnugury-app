@@ -73,7 +73,9 @@ public class Frag1 extends Fragment {
             @Override
             public void onClick(View v) {
                 taeli.setAlpha((float) 1);
+                transparency = 1;
                 taeli.setRotation((float) 0);
+                degree = 0;
                 taeli.setVisibility(View.VISIBLE);
             }
         });
