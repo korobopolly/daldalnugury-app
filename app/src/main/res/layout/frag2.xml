@@ -1,30 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/dice"
+            android:layout_marginTop="30dp">
+
+        </ImageView>
+    </LinearLayout>
 
     <TextView
-        android:id="@+id/dicenum"
-        android:layout_width="300dp"
-        android:layout_height="140dp"
-        android:textSize="30dp"
-        android:layout_marginTop="150dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:textSize="25sp"
         android:gravity="center"
-        android:layout_gravity="center"
-        android:text="버튼을 눌러\n주사위를 굴려주세요!"/>
+        android:text="주사위에서 나온 수">
+    </TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="100sp"
+        android:visibility="gone"
+        android:textColor="#000000"
+        android:id="@+id/txtDice">
+
+    </TextView>
 
     <Button
-        android:id="@+id/diceroll"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="주사위 굴리기"
-        android:textSize="24dp"
-        android:layout_marginTop="100dp"
-        android:gravity="center"
-        android:layout_gravity="center"/>
+        android:textSize="20sp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:backgroundTint="#1188AC"
+        android:id="@+id/btnResult">
+    </Button>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
 
-    
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="주사위를 굴린 횟수 : "
+            android:textSize="20sp">
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="0"
+            android:textSize="20sp"
+            android:id="@+id/txtCount">
+
+        </TextView>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="초기화"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:id="@+id/btnReset"
+        android:textSize="20sp">
+
+    </Button>
+
 </LinearLayout>

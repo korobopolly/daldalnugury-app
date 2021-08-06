@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -16,27 +17,45 @@ import java.util.Random;
 public class Frag2 extends Fragment {
     private View view;
 
-    TextView dicetext;
-    Button dicebutton;
+    private TextView txtDice;
+    private TextView txtCount;
+    private Button btnResult;
+    private Button btnReset;
+    int count = 0;
+
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.frag2,container,false);
 
-        dicetext = v.findViewById(R.id.dicenum);
-        dicebutton = v.findViewById(R.id.diceroll);
+        txtDice = v.findViewById(R.id.txtDice);
+        txtCount = v.findViewById(R.id.txtCount);
+        btnResult = v.findViewById(R.id.btnResult);
+        btnReset = v.findViewById(R.id.btnReset);
 
-        dicebutton.setOnClickListener(new View.OnClickListener() {
+
+        btnResult.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                int dicenum = 0;
+            public void onClick(View view) {
+                txtDice.setVisibility(View.VISIBLE);
+                Random num = new Random();
+                int k = num.nextInt(6)+1;
+                Toast.makeText(getContext(), "주사위를 굴렸습니다.", Toast.LENGTH_SHORT).show();
+                count++;
+                txtCount.setText(String.valueOf(count));
+                txtDice.setText(String.valueOf(k));
+            }
+        });
 
-                Random random = new Random();
-
-                dicenum = random.nextInt(6)+1;
-
-                dicetext.setText(String.valueOf(dicenum));
+        btnReset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                txtDice.setVisibility(View.GONE);
+                Toast.makeText(getContext(), "초기화합니다.", Toast.LENGTH_SHORT).show();
+                txtDice.setText("");
+                txtCount.setText(String.valueOf(0));
+                count = 0;
             }
         });
 
