@@ -23,7 +23,7 @@
         android:id="@+id/navigation_menu4"
         android:enabled="true"
         android:icon="@drawable/ic_baseline_calendar_today_24"
-        android:title="MENU4" />
+        android:title="그림판" />
     <item
         android:id="@+id/navigation_menu5"
         android:enabled="true"
