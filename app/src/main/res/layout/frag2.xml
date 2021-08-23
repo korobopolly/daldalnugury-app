@@ -16,75 +16,50 @@
             android:layout_width="200dp"
             android:layout_height="200dp"
             android:src="@drawable/dice"
-            android:layout_marginTop="30dp">
-
+            android:layout_marginTop="20dp">
         </ImageView>
+
     </LinearLayout>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:textSize="25sp"
         android:gravity="center"
         android:text="주사위에서 나온 수">
     </TextView>
 
     <TextView
+        android:id="@+id/txtDice"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:textSize="100sp"
         android:visibility="gone"
-        android:textColor="#000000"
-        android:id="@+id/txtDice">
-
+        android:textColor="#000000">
     </TextView>
 
     <Button
-        android:layout_width="match_parent"
+        android:id="@+id/btnResult"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="주사위 굴리기"
-        android:textSize="20sp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
-        android:backgroundTint="#1188AC"
-        android:id="@+id/btnResult">
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#EB894B"
+        android:textSize="20sp">
     </Button>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="주사위를 굴린 횟수 : "
-            android:textSize="20sp">
-        </TextView>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="0"
-            android:textSize="20sp"
-            android:id="@+id/txtCount">
-
-        </TextView>
-
-    </LinearLayout>
-
     <Button
+        android:id="@+id/btnReset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="초기화"
         android:layout_gravity="center"
-        android:layout_marginTop="50dp"
-        android:id="@+id/btnReset"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#D45E39"
         android:textSize="20sp">
-
     </Button>
 
 </LinearLayout>

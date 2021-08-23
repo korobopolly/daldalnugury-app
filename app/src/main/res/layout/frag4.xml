@@ -16,7 +16,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_marginRight="10dp"
-            android:text="red" />
+            android:text="red"
+            android:backgroundTint="#EB3F2F" />
 
         <Button
             android:id="@+id/draw_blue_btn"
@@ -24,7 +25,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_marginRight="10dp"
-            android:text="blue" />
+            android:text="blue"
+            android:backgroundTint="#5D62EB" />
 
         <Button
             android:id="@+id/draw_black_btn"
@@ -32,14 +34,16 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_marginRight="10dp"
-            android:text="black" />
+            android:text="black"
+            android:backgroundTint="#363636" />
 
         <Button
             android:id="@+id/clear_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="clear" />
+            android:text="clear"
+            android:backgroundTint="#C251EB" />
     </LinearLayout>
 
     <LinearLayout

@@ -18,7 +18,6 @@ public class Frag2 extends Fragment {
     private View view;
 
     private TextView txtDice;
-    private TextView txtCount;
     private Button btnResult;
     private Button btnReset;
     int count = 0;
@@ -30,7 +29,6 @@ public class Frag2 extends Fragment {
         View v = inflater.inflate(R.layout.frag2,container,false);
 
         txtDice = v.findViewById(R.id.txtDice);
-        txtCount = v.findViewById(R.id.txtCount);
         btnResult = v.findViewById(R.id.btnResult);
         btnReset = v.findViewById(R.id.btnReset);
 
@@ -43,7 +41,6 @@ public class Frag2 extends Fragment {
                 int k = num.nextInt(6)+1;
                 Toast.makeText(getContext(), "주사위를 굴렸습니다.", Toast.LENGTH_SHORT).show();
                 count++;
-                txtCount.setText(String.valueOf(count));
                 txtDice.setText(String.valueOf(k));
             }
         });
@@ -54,7 +51,6 @@ public class Frag2 extends Fragment {
                 txtDice.setVisibility(View.GONE);
                 Toast.makeText(getContext(), "초기화합니다.", Toast.LENGTH_SHORT).show();
                 txtDice.setText("");
-                txtCount.setText(String.valueOf(0));
                 count = 0;
             }
         });
